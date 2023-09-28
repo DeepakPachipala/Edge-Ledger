@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.4;
+}
+
+a{
+    text-decoration: none;
+}
+
+p {
+    margin: 0.75rem 0;
+}
+
+/* utility classes */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+.text-primary {
+    color: #93cb52;
+}
+
+.bg-light {
+    background: #f4f4f4;
+    color: #333;
+}
+
+.bg-dark {
+    background: #333;
+    color: #fff;
+}
+
+.bg-primary {
+    background: #93cb52;
+    color: #fff;
+}
+
+.l-heading {
+    font-size: 4rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+
+.m-heading {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+
+.lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.py-1{ padding: 1.5rem 0;}
+.py-2{ padding: 2rem 0;}
+.py-3{ padding: 3rem 0;}
+
+.p-1{ padding: 1.5rem ;}
+.p-2{ padding: 2rem ;}
+.p-3{ padding: 3rem ;}
+
+.btn {
+    display: inline-block;
+    color: #fff;
+    background: #93cb52;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #7ab436;
+}
+
+.btn-dark {
+    background: #333;
+    color: #fff;
+}
+
+.list {
+    margin: 0.5rem 0 ;
+    list-style: none;
+}
+
+.list li {
+    padding: 0.5rem 0;
+    border-bottom: #444 dotted 1px;
+}
+
+/* navbar */
+#navbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background: #333;
+    color: #fff;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 1rem;
+}
+
+#navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+#navbar ul li a {
+    color: #fff;
+    padding: 0.75rem;
+    margin: 0 0.2rem;
+}
+
+#navbar ul li a:hover {
+    background: #93cb52;
+    border-radius: 5px;
+}
+
+/* showcase */
+#showcase {
+    background: #333 url('../img/showcase.jpg') no-repeat center center/cover ;
+    height: 100vh;
+    color: #fff;
+}
+
+#showcase .showcase-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* width: 100vw; */
+    padding: 0.2rem;
+    /* overlay */
+    position: absolute;
+    top: 60px;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,4px);
+}
+
+/* section: what we do */
+#What .items {
+    display: flex;
+    padding: 1rem;
+}
+
+#What .items .item {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+}
+
+#What .items .item i {
+    background: #93cb52;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Section : WHo We Are */
+#Who {
+    display: flex;
+}
+
+#Who div {
+    flex: 1;
+}
+
+#Who .Who-img {
+    background: url('../img/bg-2.jpg') no-repeat center center/cover;
+}
+
+/* Clients */
+#Clients .items {
+    display: flex;
+}
+
+#Clients .items img {
+    display: block;
+    margin: auto;
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* secttion: contact */
+#Contact {
+    display: flex;
+}
+
+#Contact .map, #Contact .Contact-form {
+    flex: 1;
+}
+
+#Contact .Contact-form .Contact-group {
+    margin: 0.75rem;
+}
+
+#Contact .Contact-form label {
+    display: block;
+}
+
+#Contact .Contact-form input, #Contact .Contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+:root { 
+    --animate-speed: 2s;
+}
+
+/* page annimation */
+#showcase .showcase-content .l-heading {
+    transform: translateY(-1200px);
+    animation: heading var(--animate-speed)forwards ease-in;
+}
+
+#showcase .showcase-content p {
+    transform: translatex(-1700px);
+    animation: text var(--animate-speed)forwards ease-in-out 3s;
+}
+
+
+/* Keyframes */
+@keyframes heading {
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes text {
+    to {
+        transform: translatex(0);
+    }
+}
+
+#showcase .showcase-content .l-heading:hover {
+    color: #93cb52;
+    transform: translateY(-1200px);
+    animation: heading var(--animate-speed)forwards ease-out 2s;
+    
+}
+
+
+#main-footer a {
+    color: #7ab436;
+    background: none;
+    position: absolute;
+    text-align: right;
+    right: 0;
+}
